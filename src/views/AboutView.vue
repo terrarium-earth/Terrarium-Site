@@ -1,5 +1,10 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <p>Test</p>
 </template>
+<script>
+import HeaderBanner from "@/components/HeaderBanner";
+export default {
+  // eslint-disable-next-line vue/no-unused-components
+  components: { HeaderBanner },
+};
+</script>
