@@ -1,16 +1,22 @@
 <template>
   <div class="root">
     <div class="header">
-      <img class="logo" src="@/assets/terrariumlogo.png" />
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">What we do</router-link></li>
-        <li><router-link to="/about">Projects</router-link></li>
-        <li><router-link to="/about">Content Creators</router-link></li>
-        <li><router-link to="/about">Contact</router-link></li>
-      </ul>
+      <router-link to="/" class="logo no-animation">
+        <img
+          class="logo"
+          src="@/assets/terrariumlogo.png"
+          alt="terrarium logo"
+        />
+      </router-link>
+      <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/news">News</router-link>
+        <router-link to="/projects">Projects</router-link>
+        <router-link to="/content-creators">Content Creators</router-link>
+        <router-link to="/contact">Contact</router-link>
+      </nav>
     </div>
-    <div>
+    <div class="slot">
       <slot />
     </div>
   </div>
@@ -33,33 +39,42 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 24px;
+  padding: 32px 0;
+  vertical-align: center;
+  width: 100%;
+}
+
+nav > a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: var(--text-nav-font-size);
+  height: 100%;
+  text-decoration: none;
   vertical-align: center;
 }
 
-li {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 16px;
-}
-
 .logo {
-  height: 96px;
-  width: 96px;
+  height: 100%;
   border-radius: 100%;
+  aspect-ratio: 1/1;
 }
 
+/* make fixed in place */
 .root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0;
+  margin: 0 10%;
   vertical-align: center;
-  background-color: #bae5c5;
+  height: 100%;
 }
 
-a {
-  text-decoration: none;
-  font-size: 16px;
+nav {
+  vertical-align: center;
+}
+
+.slot {
+  height: 100%;
+  width: 100%;
 }
 </style>

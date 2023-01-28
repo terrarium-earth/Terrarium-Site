@@ -1,4 +1,4 @@
-# untitled
+# Terrarium Website
 
 ## Project setup
 ```
@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+gravy sorta did somethin with underlines i think idk 🤷‍♂️
